@@ -1,0 +1,11 @@
+.sales-summary-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 40px;
+  row-gap: 45px;
+}
+
+.sales-summary-card {
+  width: 200px;
+  height: 200px;
+}
