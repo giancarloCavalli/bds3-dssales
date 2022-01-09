@@ -1,12 +1,18 @@
+import React from 'react';
 import './styles.css';
-import { ReactComponent as AvatarIcon } from '../../assets/avatar-icon.svg';
 
-function SalesSummaryCard() {
+type Props = {
+  icon: React.ReactNode;
+  value: number;
+  label: string;
+};
+
+function SalesSummaryCard({ icon, value, label }: Props) {
   return (
     <div className="sales-summary-card base-card">
-      <AvatarIcon />
-      <h3 className="sales-summary-card-value">534.00</h3>
-      <span className="sales-summary-card-label">Média</span>
+      {icon}
+      <h3 className="sales-summary-card-value">{value}</h3>
+      <span className="sales-summary-card-label">{label}</span>
     </div>
   );
 }
