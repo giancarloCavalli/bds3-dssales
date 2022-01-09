@@ -1,25 +1,7 @@
 import './styles.css';
 import ReactApexChart from 'react-apexcharts';
 import { chartOptions } from './helpers';
-
-const initialData = [
-  {
-    x: '2022-01-01',
-    y: 54
-  },
-  {
-    x: '2022-02-01',
-    y: 60
-  },
-  {
-    x: '2022-03-1',
-    y: 54
-  },
-  {
-    x: '2022-04-1',
-    y: 100
-  }
-];
+import { initialData } from './initial-chart-data';
 
 function SalesByDate() {
   return (
