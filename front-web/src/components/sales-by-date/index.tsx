@@ -14,7 +14,9 @@ function SalesByDate({ filterData }: Props) {
   const [chartSeries, setChartSeries] = useState<ChartSeriesData[]>([]);
   const [totalSum, setTotalSum] = useState(0);
 
-  const params = useMemo(() => buildFilterParams(filterData), [filterData]);
+  const params = useMemo(() => {
+    buildFilterParams(filterData);
+  }, [filterData]);
 
   useEffect(() => {
     let isApiSubscribed = true;

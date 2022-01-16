@@ -1,3 +1,5 @@
+import { Gender } from '../types';
+
 export const formatPrice = (price: number) => {
   return new Intl.NumberFormat('pt-BR', {
     minimumFractionDigits: 2,
@@ -6,8 +8,18 @@ export const formatPrice = (price: number) => {
   }).format(price);
 };
 
-export const formatDate = (date: Date) => {
-  return date.toLocaleDateString();
+export const formatDate = (date: Date | string) => {
+  return new Date(date).toLocaleDateString();
+};
+
+export const formatGender = (gender: Gender) => {
+  const textByGender = {
+    MALE: 'Masculino',
+    FEMALE: 'Feminino',
+    OTHER: 'Outros'
+  };
+
+  return textByGender[gender];
 };
 
 export const formatDateToServer = (date?: Date) => {
